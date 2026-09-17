@@ -12,7 +12,7 @@ function deriveStudioData(f) {
   return { ...PERSON, ...f, first: parts[0] || PERSON.first, last: parts.slice(1).join(' ') || '', initials };
 }
 
-export function Studio({ sel: selProp, setSel: setSelProp, fields: fieldsProp, setFields: setFieldsProp }) {
+export function Studio({ sel: selProp = undefined, setSel: setSelProp = undefined, fields: fieldsProp = undefined, setFields: setFieldsProp = undefined }) {
   const STUDIO_KEY = 'carte-studio-v1';
   const savedStudio = React.useMemo(() => {
     if (selProp) return null; // controlled by app shell — it persists itself

@@ -199,7 +199,7 @@ export function IOSList({ header, children, dark = false }) {
 // ─────────────────────────────────────────────────────────────
 export function IOSDevice({
   children, width = 402, height = 874, dark = false,
-  title, keyboard = false,
+  title = undefined, keyboard = false,
 }) {
   return (
     <div style={{
